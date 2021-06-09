@@ -9,8 +9,9 @@ export default function Employer() {
     let employerService = new EmployerService();
     employerService
       .getEmployer()
-      .then((sonuc) => setEmployers(sonuc.data.data));
+      .then(sonuc => setEmployers(sonuc.data));
   }, []);
+
   return (
     <div>
       <Table style={{ margin: "5em" }}>

@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import JobTitleService from "../services/jobTitleService";
+import { Table } from "semantic-ui-react";
 
 export default function JobTitles() {
-    return (
-        <div>
-            
-        </div>
-    )
+  const [jobTitles, setJobTitles] = useState([]);
+  useEffect(() => {
+    let jobTitleService = new JobTitleService();
+    jobTitleService.getJobTitle().then(result => setJobTitles(result.data));
+  }, []);
+  return (
+    <div>
+      <ul>
+        {jobTitles.map((jobTitle) => (
+          <li key={jobTitle.id}>{jobTitle.title}</li>
+        ))}
+      </ul>
+    </div>
+  );
 }
