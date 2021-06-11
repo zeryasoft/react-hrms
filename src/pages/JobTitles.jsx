@@ -6,7 +6,7 @@ export default function JobTitles() {
   const [jobTitles, setJobTitles] = useState([]);
   useEffect(() => {
     let jobTitleService = new JobTitleService();
-    jobTitleService.getJobTitle().then(result => setJobTitles(result.data));
+    jobTitleService.getJobTitle().then((result) => setJobTitles(result.data));
   }, []);
   return (
     <div>

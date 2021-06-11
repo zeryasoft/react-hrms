@@ -6,7 +6,7 @@ import { routes } from "../Routing";
 export default function Navi() {
   return (
     <div>
-      <Menu size="massive">
+      <Menu size="large">
         {routes.map((route) => (
           <Menu.Item key={route.title} name={route.title}>
             {" "}
