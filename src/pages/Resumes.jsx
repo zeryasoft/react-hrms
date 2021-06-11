@@ -33,7 +33,7 @@ export default function Resumes() {
               <Table.Cell>{resume.createdDate}</Table.Cell>
               <Table.Cell>{resume.updatedDate}</Table.Cell>
               <Table.Cell>
-                <img src={resume.photo} class="ui tiny top aligned image" />
+                <img src={resume.photo}  alt="" class="ui tiny top aligned image" />
               </Table.Cell>
             </Table.Row>
           ))}

@@ -1,18 +1,16 @@
 import React from "react";
-import { Button, Dropdown, Menu } from "semantic-ui-react";
-import { Link } from "react-router-dom";
-import { routes } from "../Routing";
+import { Button, Dropdown, Menu, Container } from "semantic-ui-react";
 
 export default function Navi() {
   return (
     <div>
       <Menu size="large">
-        {routes.map((route) => (
-          <Menu.Item key={route.title} name={route.title}>
-            {" "}
-            <Link to={route.path}>{route.title}</Link>{" "}
-          </Menu.Item>
-        ))}
+      <Container>
+          <Menu.Item name="home" />
+          <Menu.Item name="messages" />
+          <Menu.Menu position="right">
+          </Menu.Menu>
+        </Container>
 
         <Menu.Menu position="right">
           <Dropdown item text="Language">
