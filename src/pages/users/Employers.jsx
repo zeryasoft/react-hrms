@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Table } from "semantic-ui-react";
 import EmployerService from "../../services/employerService";
 
-export default function Employer() {
+export default function Employers() {
   const [employers, setEmployers] = useState([]);
 
   useEffect(() => {

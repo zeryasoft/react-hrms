@@ -8,3 +8,10 @@ footer{
   bottom: 0;
   width: 100%;
 }
+
+
+.input-feedback {
+  color: red;
+  margin-top: 0.25rem;
+  font-size: 15px;
+}

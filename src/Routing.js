@@ -8,28 +8,28 @@ import Resumes from "./pages/Resumes";
 
 export const routes = [
   {
-    path: "/employer",
+    path: "/employers",
     exact: true,
     component: <Employers/>,
     title: "Employers",
     isHeaderElement: true,
   },
   {
-    path: "/candidate",
+    path: "/candidates",
     exact: true,
     component: <Candidates/>,
     title: "Candidates",
     isHeaderElement: true,
   },
   {
-    path: "/employee",
+    path: "/employees",
     exact: true,
     component: <Employees/>,
     title: "Employees",
     isHeaderElement: true,
   },
   {
-    path: "/jobPosting",
+    path: "/jobPostings",
     exact: true,
     component: <JobPostings/>,
     title: "JobPostings",
@@ -37,17 +37,17 @@ export const routes = [
   },
 
   {
-    path: "/jobTitle",
+    path: "/jobTitles",
     exact: true,
     component: <JobTitles/>,
     title: "JobTitles",
     isHeaderElement: true,
   },
   {
-    path: "/resume",
+    path: "/resumes",
     exact: true,
     component: <Resumes/>,
     title: "Resumes",
     isHeaderElement: true,
-  },
+  }, 
 ];

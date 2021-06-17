@@ -1,18 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState} from "react";
 import JobPostingService from "../services/jobPostingService";
-import { Table } from "semantic-ui-react";
+import { Table} from "semantic-ui-react";
+
+import "../App.css";
+import AddingJobPostingForm from "./AddingJobPostingForm";
 
 export default function JobPosting() {
   const [jobPostings, setJobPostings] = useState([]);
-
   useEffect(() => {
     let jobPostingsService = new JobPostingService();
     jobPostingsService
       .getJobPosting()
       .then((result) => setJobPostings(result.data.data));
   }, []);
+
   return (
     <div>
+      <AddingJobPostingForm/> 
       <Table style={{ margin: "5em" }}>
         <Table.Header>
           <Table.Row>
