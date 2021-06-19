@@ -5,6 +5,7 @@ import Employees from "./pages/users/Employees";
 import JobPostings from "./pages/JobPostings";
 import JobTitles from "./pages/JobTitles";
 import Resumes from "./pages/Resumes";
+import { Liste } from "./pages/users/Liste";
 
 export const routes = [
   {
@@ -48,6 +49,13 @@ export const routes = [
     exact: true,
     component: <Resumes/>,
     title: "Resumes",
+    isHeaderElement: true,
+  }, 
+  {
+    path: "/lists",
+    exact: true,
+    component: <Liste/>,
+    title: "Liste",
     isHeaderElement: true,
   }, 
 ];

@@ -1,7 +1,7 @@
 
 import { fetchWrapper } from '../services/fetchWrapper';
 
-const baseUrl = `api/users`;
+const baseUrl = `http://localhost:8080/api`;
 
 export const userService = {
     getAll,
@@ -12,11 +12,11 @@ export const userService = {
 };
 
 function getAll() {
-    return fetchWrapper.get(baseUrl);
+    return fetchWrapper.get(baseUrl+"/users/getAll");
 }
 
 function getById(id) {
-    return fetchWrapper.get(`${baseUrl}/${id}`);
+    return fetchWrapper.get(`${baseUrl+"/users/getByUserId?id="+id}`);
 }
 
 function create(params) {
